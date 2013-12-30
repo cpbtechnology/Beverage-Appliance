@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Pineapple",
+        "id": "PJ",
+        "pin": 22
+    },
+    {
+        "name": "Dark Rum",
+        "id": "V",
+        "pin": 17
+    },
+    {
+        "name": "Blonde Rum",
+        "id": "S",
+        "pin": 27
+    },
+    {
+        "name": "Orange Juice",
+        "id": "OJ",
+        "pin": 18
+    }
+]

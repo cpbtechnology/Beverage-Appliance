@@ -1,0 +1,108 @@
+# Linux Installation  Steps #
+
+	Go to: www.raspberrypi.org/downloads
+	Download latest version of Raspbian Wheezy
+	SD Cards we're using: Kingston 16 GB, SanDisk 8GB
+	Re-format SD Card in Fat32 using built in tools in Windows or Mac
+	Place SD card into SD Card slot. You might need to blow into the hole if the card is not recognized
+	
+	Windows:
+		Use Win32DiskImager.exe to install the linux image into SD Card
+
+	Mac:
+		#TODO: write-up mac linux installation steps
+
+	After the image is installed, hook up keyboard, mouse, and HDMI monitor to Pi, and then connect it to power
+	Linux should then boot
+
+# Linux Configuration Steps #
+
+	On first boot, raspi-config blue setup screen should come up. ('sudo raspi-config' will bring this up any time)
+		Choose expand_rootfs, click enter
+		Update boot_behaviour to boot on start-up
+		Use memory_split to lower GPU memory to 32MB
+
+	sudo apt-get update (To make sure that it knows about any new packages / versions available.)
+
+# Verified Installed Software (Verified means it didn't break our linux boot) #
+
+	# WebServer tutorial: http://www.penguintutor.com/linux/raspberrypi-webserver
+	sudo apt-get install 
+		apache2			(verified)
+		mysql-server 	(verified)
+		php5 			(verified)
+		php5-mysql 		(verified)
+		php5-curl		(verified) - This is needed for the Twitter library to work
+
+	# Serial Communication
+	sudo apt-get install
+		subversion		(verified)
+		git 			(verified)
+		python-dev		
+		rpi.gpio
+		php-pear
+
+
+# Verified Libraries #
+
+	https://github.com/ronanguilloux/php-gpio - This already is in SVN, so no need to re-install.
+		wget http://getcomposer.org/composer.phar
+		sudo php composer.phar create-project --stability='dev' ronanguilloux/php-gpio intoYourPath
+
+# Helpful Linux Commands #
+	- df -Hk (see disks)
+	- sudo reboot (reboot)
+	- sudo raspi-config (open up config screen)
+
+# Apache Configuration #
+	
+	Default web root is /var/www/
+
+	Steps to change web root:
+		sudo nano /etc/apache2/sites-enabled/000-default
+		Update the DocumentRoot and Directory to your desired directory.
+		Save the file.
+		apachectl -t
+		apachectl restart
+
+	To allow .htaccess to work:
+		<Directory /var/www/mydomain.com/html>
+			AllowOverride All
+		</Directory>
+
+	Check apache errors at this file:
+		/var/log/apache2/error.log
+		tail -f /var/log/apache2/error.log
+
+	Allow rewrite module:
+		sudo a2enmod rewrite
+		sudo apachectl restart
+
+	Remove apache case sensitivity:
+		This is the procedure for Ubuntu/Debian systems.
+
+		From the command line, type sudo su to get root privileges.
+		nano /etc/apache2/mods-available/speling.conf
+		Type CheckSpelling on and hit ctrl-x, y to exit and save the file.
+		type a2enmod and then speling and hit enter.
+		type /etc/init.d/apache2 reload to reload apache.
+		Mistype a url to test it.
+
+	To give root access to web scripts
+		http://stackoverflow.com/questions/3166123/how-to-call-shell-script-from-php-that-requires-sudo
+		sudo visudo
+		At the end of the file, add: 
+		www-data All=(ALL) NOPASSWD: ALL
+
+# Passwords #
+	
+	Raspberry Pi: pi / raspberry
+
+# Hackable Pins #
+
+	Pins that can be used for input/output are: 4, 17, 18, 22, 23, 24, 25, 27
+	Pi Pin Diagram: https://github.com/simonmonk/wiki_images/raw/master/raspberry%20leaf%20r2.pdf
+
+
+
+

@@ -1,0 +1,2 @@
+123dx is the format used by Autodesk 123D Design free application.
+stl is the output format read by the Afina H-Series printer and other 3D printers.

@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Vodka on the Rocks",
+        "id": "VR",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Vodka Soda",
+        "id": "VS",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "S",
+                "amount": 4
+            }
+        ]
+    },
+    {
+        "name": "Orange Screw",
+        "id": "OS",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "OJ",
+                "amount": 4
+            },
+            {
+                "id": "S",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Madras",
+        "id": "MD",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "S",
+                "amount": 2
+            },
+            {
+                "id": "OJ",
+                "amount": 2
+            },
+            {
+                "id": "PJ",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "name": "Cape Codder",
+        "id": "CC",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "CJ",
+                "amount": 4
+            }
+        ]
+    },
+    {
+        "name": "Sea Breeze",
+        "id": "SB",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "CJ",
+                "amount": 2
+            },
+            {
+                "id": "GJ",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Bay Breeze",
+        "id": "BB",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "CJ",
+                "amount": 2
+            },
+            {
+                "id": "PJ",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Greyhound",
+        "id": "GH",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "GJ",
+                "amount": 4
+            }
+        ]
+    },
+    {
+        "name": "Hawaiian Screw",
+        "id": "HS",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "PJ",
+                "amount": 2
+            },
+            {
+                "id": "OJ",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Pineapple Screw",
+        "id": "PS",
+        "ingredients": [
+            {
+                "id": "V",
+                "amount": 1.5
+            },
+            {
+                "id": "PJ",
+                "amount": 4
+            }
+        ]
+    }
+]

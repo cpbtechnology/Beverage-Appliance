@@ -1,0 +1,232 @@
+﻿/* overwritting site.css styles */
+html  
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+
+
+.main-content { padding: 0; }
+.content-wrapper { max-width: 1024px; }
+header .content-wrapper { padding-top: 0; }
+
+#main_container { background: url('/Images/drinkomatic.background.jpg') no-repeat; height: 768px; width: 1024px; }
+/*
+#popupClose - this is referring to the anchor tag inside the popup conatainer.
+We'll absolute position and style it here
+*/
+#popupClose{  
+	font-size:20px;  
+	line-height:20px;  
+	position:absolute;
+	right:6px;  
+	top:4px;  
+	font-weight:700; 
+	display:block;  
+}
+
+/*
+#bgPopup - this is referring to the element that will cover the whole page 
+behind the popup and above the rest of the page.
+NOTE: if you are using z-index on the same level in the DOM - 
+	#bgPopup z-index needs to have the second highest value (behind #Popup)
+*/
+#bgPopup{
+	display:none; 
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;   
+	z-index:1;  
+}  
+
+/*
+#Popup - The popup container
+NOTE: if you are using z-index on the same level in the DOM - 
+	#Popup z-index needs to have the highest value.
+*/
+#Popup{  
+	display:none;  
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6 */ 
+	background:#FFFFFF;  
+	border:2px solid #cecece;  
+	z-index:2;  
+	padding:12px;  
+	font-size:13px;  
+} 
+
+/*
+#myButton - The Button....  make it have Button-like properties
+*/
+#myButton{
+	display:block;
+	position:relative;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	font-family:"Trebuchet MS";
+	font-size:14px
+	text-align:center;	
+}
+
+body { width: 1024px; }
+#body { height: 768px; }
+
+#page_overlay { background: #000; display: block; height: 800px; margin: 0; opacity: 0.5; position: absolute; width: 1024px; z-index: 10000; }
+
+#initial_response_container { background: #e2e3e3; box-shadow: 0 0 3px #000; height: 303px; margin: 191px 0 0 290px; position: absolute; width: 444px; z-index: 10001; }
+#modal_header { color: #969597; float: left; font-family: Verdana, Helvetica, Sans-Serif; font-size: 36px; margin-top: 64px; text-align: center; text-transform: uppercase; width: 100%; }
+
+#modal_copy { float: left; margin-top: 10px; }
+#modal_copy li { color: #969597; float: left; font-family: Verdana, Helvetica, Sans-Serif; font-size: 14px; margin-left: 118px; text-transform: uppercase; width: 100%; }
+#modal_copy li.inactive { display: none; }
+#modal_responses { float: left; margin: 20px 0 0 117px; }
+#response_additional { display: none; width: 127px; }
+
+.button { background: #fff; border: 1px solid #969597; border-radius: 3px; color: #969597; float: left; font-family: Verdana, Helvetica, Sans-Serif; font-size: 11px; height: 22px; margin-right: 56px; padding-top: 10px; text-align: center; text-decoration: none; text-transform: uppercase; width: 64px; }
+.inactive_header { display: none; font-size: 23px; margin-left: 117px; text-align: left; }
+
+#menu_container { /*height: 492px; margin-top: 100px; width: 575px;*/ }
+#menu_background { height: 565px; margin: 60px 0 0 262px; position: absolute; width: 500px; z-index: 9998; }
+
+#hexagon { /*background: url('/Images/hexagon.png') no-repeat;*/ height: 345px; margin: 172px 0 0 307px; opacity: 1; position: absolute; width: 400px; }
+/*
+#hexagon { height: 457px; position: absolute; width: 530px; }
+#hexagon, #hexagon:before, #hexagon:after {
+    background: #bcbdc0;
+}
+#hexagon:before, #hexagon:after { content: ""; position: absolute; left: 22px; width: 57px; height: 57px; 
+    -moz-transform: rotate(145deg) skew(22.5deg);   
+    -webkit-transform: rotate(145deg) skew(22.5deg);
+    transform: rotate(145deg) skew(22.5deg);
+}
+#hexagon:before { top: -29px; }
+#hexagon:after { top: 27px; }
+#hexagon span { position: absolute; top: 122px; left: 380px; width: 266px; height: 457px; background:#004b83; z-index: 1; }
+*/
+#menu_header { height: 350px; margin: 165px 0 0 331px; padding: 0; overflow: hidden; position: absolute; text-indent: -9999px; width: 350px; z-index: 9999; }
+#menu_header li a { background: url('/Images/large.button.menu.png') -350px 0 no-repeat; display: block; height: 350px; margin: 0; padding: 0; list-style: none; top: 0; width: 350px; }
+#menu_header li:nth-child(1) a:hover { background-position: -350px -350px; }
+#menu_header li:nth-child(2) a { background-position: -700px 0; display: none; opacity: 0; }
+/*#menu_header li:nth-child(2) a:hover { background-position: -350px -350px; }*/
+#menu_header li:nth-child(3) a { background-position: -700px -350px; cursor: auto; display: none; opacity: 0; }
+/*#menu_header li:nth-child(4) a { background-position: -700px -350px; cursor: auto; display: none; opacity: 0; }*/
+
+#menu_header li:hover { background-position: 0 -350px; }
+
+/*#menu_loader { background-color: rgba(0, 0, 0, 0); border: 5px solid rgba(0, 183, 229, 0.9) border-radius: 50px; border-left: 5px solid rgba(0, 0, 0, 0); border-top: 5px solid rgba(0, 0, 0, 0); height: 300px; margin: 0 auto; opacity: 0.9; position: absolute; width: 300px;
+               -moz-animation: spin .5s infinite linear;
+               -webkit-animation: spin .5x infinite linear; }
+*/
+#menu_pulse { background-color: rgba(0,0,0,0); border: 13px solid rgba(0,174,239,0.3); border-radius: 188px; box-shadow: 0 0 35px #00aeef; display:none; height: 322px; margin: 169px 0 0 341px; position: absolute; width: 322px; z-index: 9998; }
+#menu_loader { background-color: rgba(0,0,0,0); border: 13px solid rgba(0,174,239,0.9); border-left: 13px solid rgba(0,0,0,0); border-top:13px solid rgba(0,0,0,0); border-radius: 188px; box-shadow: 0 0 35px #00aeef; display: none; height:350px; margin: 161px 0 0 320px; opacity:0; position: absolute; width:350px; z-index: 9999;
+	-moz-animation:spin 2.5s infinite linear;
+	-webkit-animation:spin 2.5s infinite linear;
+}
+
+@-moz-keyframes spin {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+
+#menu_pulse.pulse_centered { height: 328px; margin: 165px 0 0 334px; width: 328px; }
+
+#menu_drinks { margin: 150px 0 0 596px; position: absolute; }
+#menu_drinks li a { background: url('/Images/menu.sprite.png') -202px 0 no-repeat; font-family: Verdana, Helvetica, sans-serif; font-size: 11px; font-weight: bold; height: 95px; position: absolute; text-decoration: none; text-transform: uppercase; width: 88px; }
+#menu_drinks li:nth-child(1) a { margin: 237px 0 0 -217px; }
+#menu_drinks li:nth-child(2) a { margin: 237px 0 0 -196px; }
+#menu_drinks li:nth-child(3) a { margin: 96px 0 0 -196px; }
+#menu_drinks li:nth-child(4) a { margin: 55px 0 0 -160px; }
+#menu_drinks li:nth-child(5) a { margin: 55px 0 0 -170px; }
+#menu_drinks li:nth-child(6) a { margin: 55px 0 0 -80px; }
+#menu_drinks li:nth-child(7) a { margin: 55px 0 0 -80px; }
+#menu_drinks li:nth-child(8) a { margin: 96px 0 0 -80px; }
+#menu_drinks li:nth-child(9) a { margin: 237px 0 0 -80px; }
+#menu_drinks li:nth-child(10) a { margin: 244px 0 0 -74px; }
+
+#menu_drinks li a:hover,
+#menu_drinks li a.over_bbackground { background-position: -296px 0; }
+#menu_drinks li a.out_bbackground { background-position: -202px 0; }
+#menu_drinks li a.disable_drink { background-position: -108px 0; cursor: auto; }
+#menu_drinks li a.active_drink { background-position: -14px 0; }
+
+.drink-title { display: none; width: 100px; }
+
+#menu_drinks li:nth-child(1) a .drink-title,
+#menu_drinks li:nth-child(2) a .drink-title,
+#menu_drinks li:nth-child(3) a .drink-title,
+#menu_drinks li:nth-child(4) a .drink-title,
+#menu_drinks li:nth-child(5) a .drink-title { float: right; margin: 10px 113px 0; text-align: right; }
+#menu_drinks li:nth-child(6) a .drink-title,
+#menu_drinks li:nth-child(7) a .drink-title,
+#menu_drinks li:nth-child(8) a .drink-title,
+#menu_drinks li:nth-child(9) a .drink-title,
+#menu_drinks li:nth-child(10) a .drink-title { float: left; margin: 10px 0 0 110px; }
+
+#menu_drinks li:nth-child(1) ul, 
+#menu_drinks li:nth-child(2) ul,
+#menu_drinks li:nth-child(3) ul,
+#menu_drinks li:nth-child(4) ul,
+#menu_drinks li:nth-child(5) ul { float: right; margin-right: 112px; width: 120px; }
+
+#menu_drinks li:nth-child(6) ul, 
+#menu_drinks li:nth-child(7) ul,
+#menu_drinks li:nth-child(8) ul,
+#menu_drinks li:nth-child(9) ul,
+#menu_drinks li:nth-child(10) ul { float: left; margin-left: 111px; width: 120px; }
+
+#menu_drinks li:nth-child(1) ul .ingredients_text, 
+#menu_drinks li:nth-child(2) ul .ingredients_text,
+#menu_drinks li:nth-child(3) ul .ingredients_text,
+#menu_drinks li:nth-child(4) ul .ingredients_text,
+#menu_drinks li:nth-child(5) ul .ingredients_text { float: right; font-size: 9px; font-weight: normal; }
+
+#menu_drinks li:nth-child(6) ul .ingredients_text, 
+#menu_drinks li:nth-child(7) ul .ingredients_text,
+#menu_drinks li:nth-child(8) ul .ingredients_text,
+#menu_drinks li:nth-child(9) ul .ingredients_text,
+#menu_drinks li:nth-child(10) ul .ingredients_text { float: left; font-size: 9px; font-weight: normal; }
+
+
+#menu_footer { background: url('/Images/menu.sprite.png') 0 -144px no-repeat; float: left; height: 13px; margin: 398px 0 0 310px; overflow: hidden; text-indent: -9999px; width: 415px; }
+#menu_footer li { text-indent: -9999px; }
+#menu_footer.switch_text_serve { background-position: 0 -144px; }
+#menu_footer.switch_text_mix { background-position: 0 -159px; }
+#menu_footer.switch_text_enjoy { background-position: 0 -177px; }
+
+/*#menu_footer li:nth-child(1) { display: block; height: 13px; margin: 0; padding: 0; list-style: none; top: 0; width: 391px; }
+#menu_footer li:nth-child(2) { display: none; }*/
+#topLoader { height: 256px; margin-left: -250px; width: 256px; }
+/* drink selection */
+#drink_selection { float: left; margin: 164px 0 0 172px; }
+#drink_selection li { float: left; margin: 0; padding: 0; list-style: none; top: 0;}
+#drink_selection li, #drink_selection a { display: block; height: 122px; margin-right: 10px; }
+#drink_selection a { color: #ccc; text-align: center; text-decoration: none; width: 100%; }
+
+#drink_selection li:nth-child(1) a { background: url('/Images/drinks/drinks.sprite.png') 0 20px no-repeat; left: 0px; width: 95px; }
+#drink_selection li:nth-child(2) a { background: url('/Images/drinks/drinks.sprite.png') -101px 20px no-repeat; left: 102px; width: 95px; }
+#drink_selection li:nth-child(3) a { background: url('/Images/drinks/drinks.sprite.png') -201px 20px no-repeat; left: 102px; width: 95px; }
+#drink_selection li:nth-child(4) a { background: url('/Images/drinks/drinks.sprite.png') -302px 20px no-repeat; left: 102px; width: 95px; }
+#drink_selection li:nth-child(5) a { background: url('/Images/drinks/drinks.sprite.png') -403px 20px no-repeat; left: 102px; width: 95px; }
+
+#drink_selection li:nth-child(1) a:hover { background: url('/Images/drinks/drinks.sprite.png') 0 -121px no-repeat; }
+#drink_selection li:nth-child(2) a:hover { background: url('/Images/drinks/drinks.sprite.png') -101px -121px no-repeat; }
+#drink_selection li:nth-child(3) a:hover { background: url('/Images/drinks/drinks.sprite.png') -201px -121px no-repeat; }
+#drink_selection li:nth-child(4) a:hover { background: url('/Images/drinks/drinks.sprite.png') -302px -121px no-repeat; }
+#drink_selection li:nth-child(5) a:hover { background: url('/Images/drinks/drinks.sprite.png') -403px -121px no-repeat; }
+
+.drink_overlay { background: #000; border-radius: 5px 5px 5px 5px; height: 125px; opacity: .5; position: absolute; width: 100px; }
+
+/* loading container */
+#loading_container { background: #000; border-radius: 5px 5px 5px 5px; box-shadow: 3px 3px 3px #999999; display: none; height: 200px; margin: 145px 0 0 340px; position: absolute; width: 240px; z-index: 9999; }
+#loading_container p { color: #ccc; font-family: Verdana, Helvetica, Sans-Serif; margin-top: 155px; text-align: center; }
+#loader { background: url('/Images/loader.v2.png') no-repeat; height: 115px; margin: 25px 0 0 49px; position: absolute; width: 150px; }
+#loader_background { background: #000; height: 115px; margin: 25px 0 0 49px; position: absolute; width: 150px; }

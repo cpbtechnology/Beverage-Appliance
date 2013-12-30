@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteRule ^(v\d+\.\d+)/(.*) $2 [QSA]
+
+# Default action, page loaded with nothing else
+RewriteRule ^$ Controllers/PageController.php?action=index [QSA,L]
+
+# For any service requests, look in the services/ directory for the proper controller
+RewriteRule ^services/([^/]+)/([^/]*)/*$ Controllers/Services/$1Controller.php?action=$2 [QSA,L]
